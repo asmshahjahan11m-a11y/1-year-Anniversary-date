@@ -170,8 +170,46 @@
     <button class="next-btn" onclick="nextScreen(5)">Next ➔</button>
   </div>
 
-  <!-- Screen 5: Affection Options -->
+  <!-- Screen 5: Dress Code Options -->
   <div id="screen5" class="card hidden">
+    <h2>What should be our dress code for the date? 👗👔</h2>
+    <div class="grid" data-category="Dress Code">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🖤</span> Matching Black / White Tops</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥻</span> Saree & Shirt / Panjabi</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👕</span> Casual & Smart Outfit</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🎨</span> Color Matching Twinning</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">✨</span> Surprise me on that day</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💖</span> Whatever you wear, you look stunning</div>
+    </div>
+    <button class="next-btn" onclick="nextScreen(6)">Next ➔</button>
+  </div>
+
+  <!-- Screen 6: Meeting Place Options -->
+  <div id="screen6" class="card hidden">
+    <h2>Where would you like to meet & spend time? 📍✨</h2>
+    <div class="grid" data-category="Meeting Place">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">☕</span> Quiet Cafe / Restaurant</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🌳</span> Outdoor Park / Garden</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🌊</span> Riverside / Lake View</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛋️</span> Private & Cozy Room</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🎁</span> Surprise place chosen by you</div>
+    </div>
+    <button class="next-btn" onclick="nextScreen(7)">Next ➔</button>
+  </div>
+
+  <!-- Screen 7: Transport Mode Options -->
+  <div id="screen7" class="card hidden">
+    <h2>How should we travel around together? 🛺💖</h2>
+    <div class="grid" data-category="Transport Mode">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛺</span> Romantic Hood-Open Rickshaw Ride</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🚶‍♂️</span> Walking Hand-in-Hand</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🚗</span> Private Car / Uber Ride</div>
+    </div>
+    <button class="next-btn" onclick="nextScreen(8)">Next ➔</button>
+  </div>
+
+  <!-- Screen 8: Affection Options -->
+  <div id="screen8" class="card hidden">
     <h2>How will you shower me with affection when we meet? ❤️🔥</h2>
     <div class="grid" data-category="Affection Choices">
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💋</span> Lip Kiss</div>
@@ -186,24 +224,25 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👉</span> Fingering / Stroking Pussy with Fingers</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">😮</span> Sucking Dick & Boobies</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💦</span> Pussy Licking (If possible)</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥛</span> Swallowing Warm Cum / Cream</div>
       <div class="option-card" id="allAdor" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
     </div>
-    <button class="next-btn" onclick="nextScreen(6)">Next ➔</button>
+    <button class="next-btn" onclick="nextScreen(9)">Next ➔</button>
   </div>
 
-  <!-- Screen 6: Goodbye Moment -->
-  <div id="screen6" class="card hidden">
+  <!-- Screen 9: Goodbye Moment -->
+  <div id="screen9" class="card hidden">
     <h2>How should we say goodbye at the end of the date? 🥺💖</h2>
     <div class="grid" data-category="Goodbye Choice">
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">😘</span> A Forehead Kiss</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🫂</span> One Last Tight Hug</div>
       <div class="option-card" id="allGoodbye" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> Both of these</div>
     </div>
-    <button class="next-btn" onclick="nextScreen(7)">Next ➔</button>
+    <button class="next-btn" onclick="nextScreen(10)">Next ➔</button>
   </div>
 
-  <!-- Screen 7: Final Page -->
-  <div id="screen7" class="card hidden">
+  <!-- Screen 10: Final Page -->
+  <div id="screen10" class="card hidden">
     <h2>Yay! Can't wait to see you! 🥳🎉💖</h2>
     <p>Click below to copy your chosen plan and send it to me! 😘</p>
     <button class="copy-btn" onclick="copyPlan()">Copy Our Plan 📋</button>
