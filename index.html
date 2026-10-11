@@ -69,7 +69,7 @@
     <button class="next-btn" onclick="nextScreen(6)">Next ➔</button>
   </div>
 
-  <!-- Screen 6: Memories & Media -->
+  <!-- Screen 6: Memories & Media (Updated with Pussy & Dick Suck Video) -->
   <div id="screen6" class="card hidden">
     <h2>What special memories & videos should we capture? 📸🎥</h2>
     <div class="grid">
@@ -78,6 +78,8 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💋</span> Lip Kiss Video</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">😘</span> Neck Kiss Video</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍒</span> Boobs Suck Video</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🐱</span> Pussy Suck Video</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍆</span> Dick Suck Video</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🔥</span> Love Bite Marks Photo</div>
       <div class="option-card" id="allMemories" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> All of the above</div>
     </div>
@@ -94,7 +96,7 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🐱</span> Pussy Suck & Lick</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍒</span> Boobs Suck & Press</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍆</span> Dick Rub & Suck</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">⚾</span> Testicles (Balls) Suck or Rub</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">⚾</span> Penis Ball Suck or Rub</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍑</span> Ass Lick</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🫦</span> Hip Bite & Press</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🔥</span> Gentle Bites on Boobs, Ass & Neck</div>
@@ -104,7 +106,7 @@
     <button class="next-btn" onclick="nextScreen(8)">Next ➔</button>
   </div>
 
-  <!-- Screen 8: Intimacy & Positions (Updated) -->
+  <!-- Screen 8: Intimacy & Positions -->
   <div id="screen8" class="card hidden">
     <h2>How & Where would you like to enjoy our intimacy? 🔥❤️</h2>
     <div class="grid">
@@ -119,13 +121,20 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🏢</span> Sex on Balcony</div>
       <div class="option-card" id="allIntimacy" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> All of the above</div>
     </div>
-    <button class="next-btn" onclick="nextScreen(9)">Next ➔</button>
+    <button class="next-btn" onclick="nextScreen(9); generateSummary();">Next ➔</button>
   </div>
 
   <!-- Screen 9: Final Page -->
   <div id="screen9" class="card hidden">
     <h2>Yay! Can't wait to see you! 🥳🎉💖</h2>
-    <p>Everything is locked in! Send me a screenshot to confirm! 😘</p>
+    <p>Here are all your selected choices: 💋</p>
+    
+    <div id="summaryBox" style="background:#fff0f5; padding:15px; border-radius:10px; text-align:left; font-size:14px; margin:15px 0; max-height:200px; overflow-y:auto; border: 1px solid #ffb6c1; color: #333;">
+      <!-- Selected options will show here -->
+    </div>
+
+    <button id="copyBtn" class="next-btn" style="background-color:#4CAF50; margin-bottom:10px;" onclick="copyChoices()">📋 Copy My Choices</button>
+    <button id="waBtn" class="next-btn" style="background-color:#25D366;" onclick="sendWhatsApp()">💬 Send Choices on WhatsApp</button>
   </div>
 
   <script src="script.js"></script>
