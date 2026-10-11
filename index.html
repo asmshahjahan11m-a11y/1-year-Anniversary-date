@@ -240,10 +240,21 @@
     <button class="next-btn" onclick="nextScreen(8)">Next ➔</button>
   </div>
 
-  <!-- Screen 8: Intimacy & Positions -->
+  <!-- Screen 8: Intimacy Style (New Screen) -->
   <div id="screen8" class="card hidden">
-    <h2>How & Where would you like to enjoy our intimacy? 🔥❤️</h2>
-    <div class="grid" data-category="Intimacy & Positions">
+    <h2>How do you prefer our intimacy / sex? 🔥❤️</h2>
+    <div class="grid" data-category="Intimacy Style">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💥</span> Rough & Passionate Sex</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🌹</span> Romantic & Slow Sex</div>
+      <div class="option-card" id="allSexStyle" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> Both of these (Mix of both)</div>
+    </div>
+    <button class="next-btn" onclick="nextScreen(9)">Next ➔</button>
+  </div>
+
+  <!-- Screen 9: Intimacy Positions -->
+  <div id="screen9" class="card hidden">
+    <h2>Where & in which positions would you like to enjoy it? 🔥❤️</h2>
+    <div class="grid" data-category="Intimacy Positions">
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🐶</span> Doggy Style</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👩‍❤️‍👨</span> Missionary</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🔄</span> Girl on Top (Cowgirl)</div>
@@ -255,11 +266,11 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🏢</span> Sex on Balcony</div>
       <div class="option-card" id="allIntimacy" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> All of the above</div>
     </div>
-    <button class="next-btn" onclick="nextScreen(9)">Next ➔</button>
+    <button class="next-btn" onclick="nextScreen(10)">Next ➔</button>
   </div>
 
-  <!-- Screen 9: Goodbye Moment -->
-  <div id="screen9" class="card hidden">
+  <!-- Screen 10: Goodbye Moment -->
+  <div id="screen10" class="card hidden">
     <h2>How should we say goodbye at the end of the date? 🥺💖</h2>
     <div class="grid" data-category="Goodbye Moment">
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🫂</span> Long Hug</div>
@@ -267,11 +278,11 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">😘</span> Forehead Kiss</div>
       <div class="option-card" id="allGoodbye" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
     </div>
-    <button class="next-btn" onclick="nextScreen(10); generateSummary();">Next ➔</button>
+    <button class="next-btn" onclick="nextScreen(11); generateSummary();">Next ➔</button>
   </div>
 
-  <!-- Screen 10: Final Page -->
-  <div id="screen10" class="card hidden">
+  <!-- Screen 11: Final Page -->
+  <div id="screen11" class="card hidden">
     <h2>Yay! Can't wait to see you! 🥳🎉💖</h2>
     <p>Here are your selected choices: 💋</p>
     
