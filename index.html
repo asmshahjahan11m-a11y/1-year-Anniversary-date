@@ -251,7 +251,7 @@
     <button class="next-btn" onclick="nextScreen(9)">Next ➔</button>
   </div>
 
-  <!-- Screen 9: Intimacy Frequency (New Screen) -->
+  <!-- Screen 9: Intimacy Frequency -->
   <div id="screen9" class="card hidden">
     <h2>How many times do you want us to be intimate? 🔥😈</h2>
     <div class="grid" data-category="Intimacy Frequency">
@@ -262,8 +262,19 @@
     <button class="next-btn" onclick="nextScreen(10)">Next ➔</button>
   </div>
 
-  <!-- Screen 10: Intimacy Positions -->
+  <!-- Screen 10: Safety & Protection Preference -->
   <div id="screen10" class="card hidden">
+    <h2>What is your preference regarding protection? 🛡️✨</h2>
+    <div class="grid" data-category="Protection Preference">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛡️</span> With Condom</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💖</span> Without Condom</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💫</span> As you prefer</div>
+    </div>
+    <button class="next-btn" onclick="nextScreen(11)">Next ➔</button>
+  </div>
+
+  <!-- Screen 11: Intimacy Positions -->
+  <div id="screen11" class="card hidden">
     <h2>Where & in which positions would you like to enjoy it? 🔥❤️</h2>
     <div class="grid" data-category="Intimacy Positions">
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🐶</span> Doggy Style</div>
@@ -277,11 +288,25 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🏢</span> Sex on Balcony</div>
       <div class="option-card" id="allIntimacy" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> All of the above</div>
     </div>
-    <button class="next-btn" onclick="nextScreen(11)">Next ➔</button>
+    <button class="next-btn" onclick="nextScreen(12)">Next ➔</button>
   </div>
 
-  <!-- Screen 11: Goodbye Moment -->
-  <div id="screen11" class="card hidden">
+  <!-- Screen 12: Climax / Semen Location (NEW) -->
+  <div id="screen12" class="card hidden">
+    <h2>Kothay semen felte চাও তুমি? 💦🔥</h2>
+    <div class="grid" data-category="Semen Discharge Location">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👄</span> In Mouth / Swallow</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🐱</span> Deep Inside Pussy</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍒</span> On Boobs & Chest</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍑</span> On Ass & Back</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛏️</span> On Belly & Body</div>
+      <div class="option-card" id="allClimax" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
+    </div>
+    <button class="next-btn" onclick="nextScreen(13)">Next ➔</button>
+  </div>
+
+  <!-- Screen 13: Goodbye Moment -->
+  <div id="screen13" class="card hidden">
     <h2>How should we say goodbye at the end of the date? 🥺💖</h2>
     <div class="grid" data-category="Goodbye Moment">
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🫂</span> Long Hug</div>
@@ -289,11 +314,11 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">😘</span> Forehead Kiss</div>
       <div class="option-card" id="allGoodbye" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
     </div>
-    <button class="next-btn" onclick="nextScreen(12); generateSummary();">Next ➔</button>
+    <button class="next-btn" onclick="nextScreen(14); generateSummary();">Next ➔</button>
   </div>
 
-  <!-- Screen 12: Final Page -->
-  <div id="screen12" class="card hidden">
+  <!-- Screen 14: Final Page -->
+  <div id="screen14" class="card hidden">
     <h2>Yay! Can't wait to see you! 🥳🎉💖</h2>
     <p>Here are your selected choices: 💋</p>
     
