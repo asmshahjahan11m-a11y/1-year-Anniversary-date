@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Special Date 💖</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #ffeef2;
@@ -14,7 +17,6 @@
       min-height: 100vh;
       margin: 0;
       padding: 20px;
-      box-sizing: border-box;
     }
 
     .card {
@@ -28,18 +30,18 @@
     }
 
     .hidden {
-      display: none;
+      display: none !important;
     }
 
     h2 {
       color: #ff4b72;
-      font-size: 20px;
+      font-size: 19px;
       margin-bottom: 20px;
     }
 
     p {
       color: #555;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.5;
     }
 
@@ -68,38 +70,41 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 10px;
       margin-bottom: 20px;
-      max-height: 320px;
+      max-height: 280px;
       overflow-y: auto;
-      padding-right: 5px;
+      text-align: left;
+      padding: 2px;
     }
 
     .option-card {
       border: 2px solid #ffe2e8;
-      padding: 12px 8px;
+      padding: 10px 6px;
       border-radius: 12px;
       cursor: pointer;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       background: #fff0f3;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       color: #333;
+      text-align: center;
       transition: all 0.2s ease;
     }
 
     .option-card.selected {
       border-color: #ff4b72;
       background-color: #ffe2e8;
-      transform: scale(1.03);
+      transform: scale(1.02);
       font-weight: bold;
     }
 
     .emoji {
-      font-size: 24px;
-      margin-bottom: 5px;
+      font-size: 22px;
+      margin-bottom: 4px;
     }
 
     .next-btn {
@@ -108,13 +113,13 @@
     }
 
     .copy-btn {
-      background-color: #25d366;
-      margin-top: 12px;
+      background-color: #4CAF50;
+      margin-top: 10px;
       width: 100%;
     }
 
     .wa-btn {
-      background-color: #128c7e;
+      background-color: #25D366;
       margin-top: 10px;
       width: 100%;
     }
@@ -126,7 +131,7 @@
       text-align: left;
       font-size: 13px;
       margin: 15px 0;
-      max-height: 180px;
+      max-height: 160px;
       overflow-y: auto;
       border: 1px solid #ffb6c1;
       color: #333;
@@ -163,12 +168,7 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍦</span> Ice Cream</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍫</span> Chocolate</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍛</span> Biryani</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍔</span> Burger & Fries</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍕</span> Pizza</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥟</span> Momo</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍰</span> Dessert</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">☕</span> Coffee / Cold Drinks</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">✨</span> Something of your choice</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">✨</span> Something else</div>
       <div class="option-card" id="allFoods" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
     </div>
     <button class="next-btn" onclick="nextScreen(4)">Next ➔</button>
@@ -196,9 +196,6 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👔</span> Long Shirt</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥻</span> Saree</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💫</span> Bracelet</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💐</span> Chocolates & Flowers</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">⌚</span> Watch</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💭</span> Anything you want to give with love</div>
       <div class="option-card" id="allGifts" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
     </div>
     <button class="next-btn" onclick="nextScreen(6)">Next ➔</button>
@@ -234,8 +231,7 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">⚾</span> Penis Ball Suck or Rub</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍑</span> Ass Lick</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🫦</span> Hip Bite & Press</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🔥</span> Gentle Bites on Boobs, Ass & Neck</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💖</span> Playful Bites near Pussy & Dick area</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🔥</span> Gentle Bites</div>
       <div class="option-card" id="allForeplay" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> All of the above</div>
     </div>
     <button class="next-btn" onclick="nextScreen(8)">Next ➔</button>
@@ -262,14 +258,14 @@
   <!-- Screen 9: Final Page -->
   <div id="screen9" class="card hidden">
     <h2>Yay! Can't wait to see you! 🥳🎉💖</h2>
-    <p>Here are all your selected choices: 💋</p>
+    <p>Here are your selected choices: 💋</p>
     
     <div id="summaryBox">
-      <!-- Summary text generated automatically -->
+      <!-- Summary will appear here -->
     </div>
 
-    <button class="copy-btn" onclick="copyPlan()">Copy My Choices 📋</button>
-    <button class="wa-btn" onclick="sendWhatsApp()">Send on WhatsApp 💬</button>
+    <button class="copy-btn" onclick="copyPlan()">📋 Copy My Choices</button>
+    <button class="wa-btn" onclick="sendWhatsApp()">💬 Send on WhatsApp</button>
   </div>
 
   <script>
@@ -303,7 +299,6 @@
     function selectAllInGroup(element) {
       const parentGrid = element.closest('.grid');
       const allCards = parentGrid.querySelectorAll('.option-card');
-      
       const isAlreadySelected = element.classList.contains('selected');
 
       allCards.forEach(card => {
@@ -335,7 +330,7 @@
       });
 
       if (summary === "💖 OUR SPECIAL DATE PLAN 💖\n\n") {
-        summary += "No specific options were selected, but I'm excited to meet! 💕";
+        summary += "No specific options selected, everything is a surprise! 😘";
       }
 
       return summary;
@@ -351,11 +346,10 @@
 
     function copyPlan() {
       const summary = getSummaryText();
-
       navigator.clipboard.writeText(summary).then(() => {
-        alert("Plan copied to clipboard! 📋 Now paste and send it to me!");
+        alert("Copied to clipboard! 📋 Now paste and send it!");
       }).catch(err => {
-        alert("Failed to copy automatically. Please copy the text from the box!");
+        alert("Failed to copy automatically. Please copy text from the box.");
       });
     }
 
