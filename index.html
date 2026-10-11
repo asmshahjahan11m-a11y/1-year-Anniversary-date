@@ -3,114 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Special Resort Date 💖</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #ffeef2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      text-align: center;
-      max-width: 420px;
-      width: 100%;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    h2 {
-      color: #ff4b72;
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #555;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    .btn-group {
-      margin-top: 20px;
-      position: relative;
-      height: 60px;
-    }
-
-    button {
-      background-color: #ff4b72;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 16px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    #noBtn {
-      background-color: #aaa;
-      position: absolute;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .option-card {
-      border: 2px solid #ffe2e8;
-      padding: 12px 8px;
-      border-radius: 12px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #fff0f3;
-      font-size: 13px;
-      font-weight: 500;
-      color: #333;
-      transition: all 0.2s ease;
-      text-align: center;
-    }
-
-    .option-card.selected {
-      border-color: #ff4b72;
-      background-color: #ffe2e8;
-      transform: scale(1.03);
-      font-weight: bold;
-    }
-
-    .emoji {
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    .next-btn {
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    .copy-btn {
-      background-color: #25d366;
-      margin-top: 15px;
-      width: 100%;
-    }
-  </style>
+  <title>Our Special Date 💖</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -126,7 +20,7 @@
   <!-- Screen 2: Days in Sirajganj -->
   <div id="screen2" class="card hidden">
     <h2>How many days do you want me to stay in Sirajganj for our first meet? 🏡✨</h2>
-    <div class="grid" data-category="Days in Sirajganj">
+    <div class="grid">
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">1️⃣</span> 1 Day</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">2️⃣</span> 2 Days</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">3️⃣</span> 3 Days</div>
@@ -137,197 +31,103 @@
   <!-- Screen 3: Food Options -->
   <div id="screen3" class="card hidden">
     <h2>What would you like to eat on our date? 😋🍕</h2>
-    <div class="grid" data-category="Food Preferences">
+    <div class="grid">
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥣</span> Fuchka</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍦</span> Ice Cream</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍫</span> Chocolate</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍛</span> Biryani</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍔</span> Burger & Fries</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍕</span> Pizza</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥟</span> Momo</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍰</span> Dessert</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">☕</span> Coffee / Cold Drinks</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">✨</span> Something of your choice</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">✨</span> Something else of your choice</div>
       <div class="option-card" id="allFoods" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
     </div>
     <button class="next-btn" onclick="nextScreen(4)">Next ➔</button>
   </div>
 
-  <!-- Screen 4: Gift Options -->
+  <!-- Screen 4: Transport -->
   <div id="screen4" class="card hidden">
-    <h2>Which gift would you like to receive? 🎁✨</h2>
-    <div class="grid" data-category="Gift Choices">
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">レスレット</span> Bangles</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💍</span> Ring</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👔</span> Long Shirt</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥻</span> Saree</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">📿</span> Bracelet</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💐</span> Chocolates & Flowers</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">⌚</span> Watch</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💭</span> Anything you want to give with love</div>
-      <div class="option-card" id="allGifts" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
+    <h2>How would you like us to travel to the Resort? 🚌🛺</h2>
+    <div class="grid">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🚌</span> By Bus</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛺</span> By CNG</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🏍️</span> By Bike</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🚗</span> By Car / Rickshaw</div>
+      <div class="option-card" id="allTransport" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> Any of your choice</div>
     </div>
     <button class="next-btn" onclick="nextScreen(5)">Next ➔</button>
   </div>
 
-  <!-- Screen 5: Dress Code Options -->
+  <!-- Screen 5: Gift Options -->
   <div id="screen5" class="card hidden">
-    <h2>What should be our dress code for the date? 👗👔</h2>
-    <div class="grid" data-category="Dress Code">
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🖤</span> Matching Black / White Tops</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥻</span> Saree & Shirt / Panjabi</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👕</span> Casual & Smart Outfit</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🎨</span> Color Matching Twinning</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">✨</span> Surprise me on that day</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💖</span> Whatever you wear, you look stunning</div>
+    <h2>Which gift would you like to receive? 🎁✨</h2>
+    <div class="grid">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">📿</span> Bangles</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💍</span> Ring</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👔</span> Long Shirt</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥻</span> Saree</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💫</span> Bracelet</div>
+      <div class="option-card" id="allGifts" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
     </div>
     <button class="next-btn" onclick="nextScreen(6)">Next ➔</button>
   </div>
 
-  <!-- Screen 6: Meeting Place Options -->
+  <!-- Screen 6: Memories & Media -->
   <div id="screen6" class="card hidden">
-    <h2>Where would you like to meet & spend time? 📍✨</h2>
-    <div class="grid" data-category="Meeting Place">
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">☕</span> Quiet Cafe / Restaurant</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🌳</span> Outdoor Park / Garden</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🌊</span> Riverside / Lake View</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛋️</span> Private Resort Room</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🎁</span> Surprise place chosen by you</div>
+    <h2>What special memories & videos should we capture? 📸🎥</h2>
+    <div class="grid">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">📸</span> Couple Photo</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🎥</span> Couple Video</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💋</span> Lip Kiss Video</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">😘</span> Neck Kiss Video</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍒</span> Boobs Suck Video</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🔥</span> Love Bite Marks Photo</div>
+      <div class="option-card" id="allMemories" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> All of the above</div>
     </div>
     <button class="next-btn" onclick="nextScreen(7)">Next ➔</button>
   </div>
 
-  <!-- Screen 7: Transport Mode Options -->
+  <!-- Screen 7: Foreplay Options -->
   <div id="screen7" class="card hidden">
-    <h2>How should we travel around together? 🛺💖</h2>
-    <div class="grid" data-category="Transport Mode">
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛺</span> Romantic Hood-Open Rickshaw Ride</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🚶‍♂️</span> Walking Hand-in-Hand</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🚗</span> Private Car / Uber Ride</div>
+    <h2>How should we start our romance with Foreplay? 🔥💋</h2>
+    <div class="grid">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💋</span> Lip Kiss</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">😘</span> Neck Kiss</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👅</span> Belly & Navel Lick</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🐱</span> Pussy Suck & Lick</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍒</span> Boobs Suck & Press</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍆</span> Dick Rub & Suck</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">⚾</span> Testicles (Balls) Suck or Rub</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍑</span> Ass Lick</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🫦</span> Hip Bite & Press</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🔥</span> Gentle Bites on Boobs, Ass & Neck</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💖</span> Playful Bites near Pussy & Dick area</div>
+      <div class="option-card" id="allForeplay" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> All of the above</div>
     </div>
     <button class="next-btn" onclick="nextScreen(8)">Next ➔</button>
   </div>
 
-  <!-- Screen 8: Resort Room Vibe -->
+  <!-- Screen 8: Intimacy & Positions (Updated) -->
   <div id="screen8" class="card hidden">
-    <h2>How should our resort room environment be? 🕯️🌹</h2>
-    <div class="grid" data-category="Resort Room Vibe">
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🕯️</span> Dim Lights & Candlelight Vibe</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🌹</span> Bed Decorated with Rose Petals</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🎵</span> Soft Romantic Songs in Background</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍷</span> Drinks & Snacks Ready in Room</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🚿</span> Relaxing Shower Bath Together</div>
+    <h2>How & Where would you like to enjoy our intimacy? 🔥❤️</h2>
+    <div class="grid">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🐶</span> Doggy Style</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👩‍❤️‍👨</span> Missionary</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🔄</span> Girl on Top (Cowgirl)</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🧍</span> Standing Position</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🚿</span> Sex in Shower</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛋️</span> Sex on Sofa</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🪑</span> Sex on Table / Chair</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🍳</span> Sex in Kitchen</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🏢</span> Sex on Balcony</div>
+      <div class="option-card" id="allIntimacy" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> All of the above</div>
     </div>
     <button class="next-btn" onclick="nextScreen(9)">Next ➔</button>
   </div>
 
-  <!-- Screen 9: Intimate / Sex Styles -->
+  <!-- Screen 9: Final Page -->
   <div id="screen9" class="card hidden">
-    <h2>Which intimate positions & styles would you like to try? 🔞🔥</h2>
-    <div class="grid" data-category="Intimate Styles">
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👩‍❤️‍💋‍👨</span> Missionary Position<br><small>(চোখে চোখ রেখে ক্লাসিক রোমান্টিক স্টাইল)</small></div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🐶</span> Doggy Style<br><small>(পেছন থেকে র এবং প্যাশনেট স্টাইল)</small></div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛌</span> Flat Bed Style / Lazy Doggy<br><small>(বেডে উপুড় হয়ে শুয়ে পেছন থেকে ডিপ কানেকশন)</small></div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🪞</span> In Front of the Mirror<br><small>(আয়নার সামনে দাঁড়িয়ে নিজেকে ও সঙ্গীকে দেখে এনজয় করা)</small></div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🦵</span> Leg on Shoulder<br><small>(পা কাঁধে তুলে দিয়ে গভীর ও তীব্র অনুভূতি নেওয়া)</small></div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛋️</span> On the Sofa<br><small>(সোফায় আরাম করে ইনটিমেট হওয়া)</small></div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🚿</span> Bathroom Romance & Shower Sex<br><small>(একসাথে গোসল ও শাওয়ারের পানিতে ভিজে সেক্স)</small></div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👅</span> 69 Position<br><small>(একসাথে দুজন দুজনকে ওরাল আনন্দ দেওয়া)</small></div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👸</span> Girl on Top / Cowgirl<br><small>(মেয়ে উপরে বসে কন্ট্রোল করার স্টাইল)</small></div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🛋️</span> Standing or Edge of Bed<br><small>(দাঁড়িয়ে বা বেডের শেষ প্রান্তে শুইয়ে গভীর রোমান্স)</small></div>
-      <div class="option-card" id="allStyles" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
-    </div>
-    <button class="next-btn" onclick="nextScreen(10)">Next ➔</button>
-  </div>
-
-  <!-- Screen 10: Goodbye Moment -->
-  <div id="screen10" class="card hidden">
-    <h2>How should we say goodbye at the end of the date? 🥺💖</h2>
-    <div class="grid" data-category="Goodbye Choice">
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">😘</span> A Forehead Kiss</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🫂</span> One Last Tight Hug</div>
-      <div class="option-card" id="allGoodbye" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> Both of these</div>
-    </div>
-    <button class="next-btn" onclick="nextScreen(11)">Next ➔</button>
-  </div>
-
-  <!-- Screen 11: Final Page -->
-  <div id="screen11" class="card hidden">
     <h2>Yay! Can't wait to see you! 🥳🎉💖</h2>
-    <p>Click below to copy your chosen plan and send it to me! 😘</p>
-    <button class="copy-btn" onclick="copyPlan()">Copy Our Plan 📋</button>
+    <p>Everything is locked in! Send me a screenshot to confirm! 😘</p>
   </div>
 
-  <script>
-    const noBtn = document.getElementById('noBtn');
-
-    if (noBtn) {
-      noBtn.addEventListener('mouseover', moveNoButton);
-      noBtn.addEventListener('touchstart', moveNoButton);
-    }
-
-    function moveNoButton() {
-      const x = Math.floor(Math.random() * 200) - 100;
-      const y = Math.floor(Math.random() * 200) - 100;
-      noBtn.style.transform = `translate(${x}px, ${y}px)`;
-    }
-
-    function nextScreen(screenNum) {
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => card.classList.add('hidden'));
-
-      const targetScreen = document.getElementById(`screen${screenNum}`);
-      if (targetScreen) {
-        targetScreen.classList.remove('hidden');
-      }
-    }
-
-    function toggleSelect(element) {
-      element.classList.toggle('selected');
-    }
-
-    function selectAllInGroup(element) {
-      const parentGrid = element.closest('.grid');
-      const allCards = parentGrid.querySelectorAll('.option-card');
-      
-      const isAlreadySelected = element.classList.contains('selected');
-
-      allCards.forEach(card => {
-        if (isAlreadySelected) {
-          card.classList.remove('selected');
-        } else {
-          card.classList.add('selected');
-        }
-      });
-    }
-
-    function copyPlan() {
-      let summary = "💖 OUR SPECIAL DATE PLAN 💖\n\n";
-      const grids = document.querySelectorAll('.grid');
-
-      grids.forEach(grid => {
-        const category = grid.getAttribute('data-category');
-        const selectedOptions = grid.querySelectorAll('.option-card.selected');
-
-        if (selectedOptions.length > 0) {
-          summary += `📌 ${category}:\n`;
-          selectedOptions.forEach(opt => {
-            summary += `  - ${opt.innerText.trim()}\n`;
-          });
-          summary += "\n";
-        }
-      });
-
-      if (summary === "💖 OUR SPECIAL DATE PLAN 💖\n\n") {
-        summary += "No specific options were selected, but I'm excited to meet! 💕";
-      }
-
-      navigator.clipboard.writeText(summary).then(() => {
-        alert("Plan copied to clipboard! 📋 Now paste and send it to me!");
-      }).catch(err => {
-        alert("Failed to copy automatically. Please take a screenshot!");
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
