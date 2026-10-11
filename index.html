@@ -187,7 +187,7 @@
     <button class="next-btn" onclick="nextScreen(5)">Next ➔</button>
   </div>
 
-  <!-- Screen 5: Gift Options (Updated) -->
+  <!-- Screen 5: Gift Options -->
   <div id="screen5" class="card hidden">
     <h2>Which gift would you like to receive? 🎁✨</h2>
     <div class="grid" data-category="Gift Choices">
@@ -196,7 +196,7 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👔</span> Long Shirt</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🥻</span> Saree</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💫</span> Bracelet</div>
-      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">Bras</span> Bra</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">👙</span> Bra</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🩲</span> Sexy Panty</div>
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">📿</span> Golar Necklace</div>
       <div class="option-card" id="allGifts" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
@@ -221,7 +221,7 @@
     <button class="next-btn" onclick="nextScreen(7)">Next ➔</button>
   </div>
 
-  <!-- Screen 7: Foreplay Options (Updated) -->
+  <!-- Screen 7: Foreplay Options -->
   <div id="screen7" class="card hidden">
     <h2>How should we start our romance with Foreplay? 🔥💋</h2>
     <div class="grid" data-category="Foreplay Choices">
@@ -255,11 +255,23 @@
       <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🏢</span> Sex on Balcony</div>
       <div class="option-card" id="allIntimacy" onclick="selectAllInGroup(this)"><span class="emoji">💘</span> All of the above</div>
     </div>
-    <button class="next-btn" onclick="nextScreen(9); generateSummary();">Next ➔</button>
+    <button class="next-btn" onclick="nextScreen(9)">Next ➔</button>
   </div>
 
-  <!-- Screen 9: Final Page -->
+  <!-- Screen 9: Goodbye Moment -->
   <div id="screen9" class="card hidden">
+    <h2>How should we say goodbye at the end of the date? 🥺💖</h2>
+    <div class="grid" data-category="Goodbye Moment">
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">🫂</span> Long Hug</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">💋</span> Long Kiss</div>
+      <div class="option-card" onclick="toggleSelect(this)"><span class="emoji">😘</span> Forehead Kiss</div>
+      <div class="option-card" id="allGoodbye" onclick="selectAllInGroup(this)"><span class="emoji">💖</span> All of the above</div>
+    </div>
+    <button class="next-btn" onclick="nextScreen(10); generateSummary();">Next ➔</button>
+  </div>
+
+  <!-- Screen 10: Final Page -->
+  <div id="screen10" class="card hidden">
     <h2>Yay! Can't wait to see you! 🥳🎉💖</h2>
     <p>Here are your selected choices: 💋</p>
     
